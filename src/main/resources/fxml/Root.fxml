@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.birikfr.controllers.RootController">
+   <top>
+      <MenuBar fx:id="menubar" prefHeight="28.0" prefWidth="731.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="\%File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openHtmlEditor" text="%newMsg" />
+                  <MenuItem mnemonicParsing="false" onAction="#openSetting" text="%Setting" />
+              <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="%Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aboutAction" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="618.0" prefWidth="906.0" BorderPane.alignment="CENTER">
+         <top>
+            <ToolBar fx:id="toolbar" prefHeight="40.0" prefWidth="966.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button fx:id="createBtn" mnemonicParsing="false" onAction="#createMail" text="%NewMsg" />
+              </items>
+            </ToolBar>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <left>
+                  <SplitPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <AnchorPane fx:id="treeAnchorPane" prefHeight="200.0" prefWidth="200.0" />
+                     </items>
+                  </SplitPane>
+               </left>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <SplitPane dividerPositions="0.6657018813314037" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+                          <items>
+                            <AnchorPane fx:id="tableView" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                            <AnchorPane fx:id="webview" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                          </items>
+                        </SplitPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
